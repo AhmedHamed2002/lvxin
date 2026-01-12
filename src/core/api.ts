@@ -1,4 +1,5 @@
 import {fileHttpExecutor, noLoginHttpExecutor, request} from "@/core/http";
+import {PageQuery} from "@/core/table";
 
 export namespace Api {
 
@@ -118,10 +119,21 @@ export namespace Api {
     }
   }
 
-  class Lvxin extends AbstractServerApi{
+  class Lvxin extends AbstractServerApi {
     constructor() {
       super('yi-lvxin-web-server');
     }
+
+    public toPageBlogList(pageQuery: PageQuery) {
+      return this.post('/lvxinWeb/blog/toPage', pageQuery)
+    }
+
+    public getBlogById(id: string) {
+      return this.get('/lvxinWeb/blog/getById', {
+        id
+      })
+    }
+
   }
 
   export const auth = new Auth()

@@ -1,5 +1,5 @@
 import axios, {AxiosInstance, AxiosPromise, AxiosResponse, InternalAxiosRequestConfig} from "axios";
-import {BASE_URL} from "@/lib/api";
+import {GATEWAY_URL} from "@/lib/api";
 
 //---------------------------------------------------------------------
 // base type
@@ -125,7 +125,7 @@ abstract class HttpExecutor {
       url,
       method: 'get',
       params,
-      baseURL: `${BASE_URL}/api/${applicationName}`
+      baseURL: `${GATEWAY_URL}/api/${applicationName}`
     })
   }
 
@@ -141,7 +141,7 @@ abstract class HttpExecutor {
       url,
       method: 'post',
       data,
-      baseURL: `${BASE_URL}/api/${applicationName}`
+      baseURL: `${GATEWAY_URL}/api/${applicationName}`
     })
   }
 }
@@ -175,7 +175,7 @@ class FileHttpExecutor extends HttpExecutor {
   public uploadFile(url: string, applicationName: any, data?: any): Promise<any> {
     return this.instance.post(url, data, {
       headers: {'content-type': 'multipart/area-panel'},
-      baseURL: `${BASE_URL}/api/${applicationName}`
+      baseURL: `${GATEWAY_URL}/api/${applicationName}`
     })
   }
 
@@ -187,7 +187,7 @@ class FileHttpExecutor extends HttpExecutor {
    */
   public downloadFile(url: string, applicationName: any, data?: any): Promise<any> {
     return this.instance.get(url, {
-      baseURL: `${BASE_URL}/api/${applicationName}`,
+      baseURL: `${GATEWAY_URL}/api/${applicationName}`,
       responseType: 'blob',
       params: data
     })
@@ -202,7 +202,7 @@ class FileHttpExecutor extends HttpExecutor {
    */
   public downloadFilePost(url: string, applicationName: any, data?: any): Promise<any> {
     return this.instance.post(url, data, {
-      baseURL: `${BASE_URL}/api/${applicationName}`,
+      baseURL: `${GATEWAY_URL}/api/${applicationName}`,
       responseType: 'blob',
     })
   }

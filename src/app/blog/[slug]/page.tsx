@@ -41,7 +41,7 @@ export default function BlogPostPage({ params }: PageProps) {
         <p>As we move towards 2025, the integration of Large Language Models (LLMs) specifically trained on legal datasets will further enhance these capabilities, allowing for even more nuanced understanding of complex legal frameworks.</p>
         `,
         image: "/assets/images/blog1.jpg",
-        categories: ["AI Analysis", "Legal Tech"],
+        categoriesList: ["AI Analysis", "Legal Tech"],
         author: {
         name: "Dr. Catherine Smith",
         image: "/assets/images/avatar1.png",
@@ -82,7 +82,7 @@ export default function BlogPostPage({ params }: PageProps) {
                     <div className="p-8 md:p-12">
                         {/* Meta Info */}
                         <div className="flex flex-wrap items-center gap-4 mb-8">
-                        {post.categories.map((cat, idx) => (
+                        {post.categoriesList.map((cat, idx) => (
                             <Badge key={idx} className="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border-none px-3 py-1 text-xs font-semibold">
                             {cat}
                             </Badge>
@@ -121,12 +121,12 @@ export default function BlogPostPage({ params }: PageProps) {
                         </div>
 
                         {/* Content */}
-                        <div 
-                        className="prose prose-lg max-w-none dark:prose-invert 
-                            prose-headings:text-neutral-900 dark:prose-headings:text-white 
-                            prose-p:text-neutral-600 dark:prose-p:text-neutral-400 
+                        <div
+                        className="prose prose-lg max-w-none dark:prose-invert
+                            prose-headings:text-neutral-900 dark:prose-headings:text-white
+                            prose-p:text-neutral-600 dark:prose-p:text-neutral-400
                             prose-strong:text-neutral-900 dark:prose-strong:text-white
-                            prose-blockquote:border-blue-600 dark:prose-blockquote:bg-blue-900/10 
+                            prose-blockquote:border-blue-600 dark:prose-blockquote:bg-blue-900/10
                             prose-blockquote:text-neutral-700 dark:prose-blockquote:text-neutral-300
                             prose-li:text-neutral-600 dark:prose-li:text-neutral-400"
                         dangerouslySetInnerHTML={{ __html: post.content }}
@@ -134,8 +134,8 @@ export default function BlogPostPage({ params }: PageProps) {
 
                         {/* Footer / Sharing */}
                         <div className="mt-16 pt-8 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between">
-                        <Link 
-                            href="/blog" 
+                        <Link
+                            href="/blog"
                             className="flex items-center gap-2 font-bold text-blue-600 dark:text-blue-400 hover:gap-3 transition-all"
                         >
                             <ArrowLeft className="h-4 w-4" />
