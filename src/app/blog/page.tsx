@@ -7,6 +7,8 @@ import PageHero from "@/components/PageHero";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { BlogSidebar } from "@/components/blog/BlogSidebar";
 import { Pagination } from "@/components/blog/Pagination";
+import QRContactSection from "@/components/QRContactSection";
+import LawyerRequestCTA from "@/components/LawyerRequestCTA";
 
 
 export default function BlogPage() {
@@ -99,6 +101,12 @@ export default function BlogPage() {
                 </div>
             </section>
         </main>
+
+            {/* QR Contact Section */}
+            <QRContactSection/>
+
+            {/* Lawyer Request CTA */}
+            <LawyerRequestCTA/>
 
             {/* Newsletter Section */}
             <div className="bg-[#f2f3f7] dark:bg-[#1b1f2c]">

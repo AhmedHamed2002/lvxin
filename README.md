@@ -73,4 +73,3 @@ The project uses CSS variables for theming, enabling seamless switching between 
 ## 📄 License
 
 [Private / Proprietary]
-

@@ -8,7 +8,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/footer";
 
     const STORIES = [
@@ -107,10 +106,10 @@ export default function SuccessStoriesPage() {
                         with LVXIN's AI-powered legal technology platform.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
-                        <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white gap-2 h-12 px-8 rounded-full shadow-lg hover:shadow-xl transition-all border-none font-semibold">
+                        <Button size="lg" className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white gap-2 h-12 px-8 rounded-full shadow-lg hover:shadow-xl transition-all border-none font-semibold">
                             <Heart className="w-4 h-4" /> Share Your Story
                         </Button>
-                        <Button variant="outline" size="lg" className="gap-2 h-12 px-8 rounded-full border-white/30 text-white hover:bg-white/10 backdrop-blur-md transition-all font-semibold">
+                        <Button variant="outline" size="lg" className="gap-2 h-12 cursor-pointer px-8 rounded-full border-white/30 text-blue-700 dark:text-white hover:bg-white/10 backdrop-blur-md transition-all font-semibold">
                             <Rocket className="w-4 h-4" /> Try Our Platform
                         </Button>
                     </div>

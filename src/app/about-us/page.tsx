@@ -12,6 +12,8 @@ import WhyChooseLVX from "@/components/WhyChooseLVX";
 import NewsletterSection from "@/components/NewsletterSection";
 import ContactSection from "@/components/ContactSection";
 import PartnersSection from "@/components/PartnersSection";
+import LawyerRequestCTA from "@/components/LawyerRequestCTA";
+import QRContactSection from "@/components/QRContactSection";
 
 export default function AboutUsPage() {
     const breadcrumbs = [
@@ -25,7 +27,7 @@ export default function AboutUsPage() {
             <PageHero title="about us" breadcrumbs={breadcrumbs} />
 
             {/* Team Section */}
-            <section className="py-20 px-4  mx-auto bg-gradient-to-r from-[#d0dcff] to-[#eff1f7] dark:from-[#04152c] dark:to-[#0a2368] border-t-[3px] border-dotted border-blue-200 dark:border-blue-900">
+            <section className="py-20 px-4  mx-auto bg-linear-to-r from-[#d0dcff] to-[#eff1f7] dark:from-[#04152c] dark:to-[#0a2368] border-t-[3px] border-dotted border-blue-200 dark:border-blue-900">
                 <div className="text-center mb-16 relative">
                     <h2 className="text-3xl font-bold text-[#111827] dark:text-[#cdd9f3cc] relative z-10 inline-block">
                         "Meet our expert team driving innovation in contract analysis"
@@ -111,7 +113,7 @@ export default function AboutUsPage() {
             {/* Vision Section */}
             <section className="min-h-[50vh] md:min-h-[80vh] py-24 container-fluid flex justify-center items-center flex-col bg-[#f2f3f7] dark:bg-[#202123b4]  bg-cover bg-center bg-no-repeat bg-[url('/assets/images/our-vision.png')]">
                 <div className="max-w-8xl mx-6 cursor-pointer px-10 bg-white dark:bg-[#1d1c1cf2] rounded-3xl p-6 md:p-12 shadow-md border border-neutral-100 dark:border-neutral-700 flex flex-col md:flex-row items-center gap-8 relative z-10 transition-all hover:shadow-xl duration-700 hover:scale-95">
-                    <div className="bg-blue-50 dark:bg-blue-900/50 p-4 rounded-2xl flex-shrink-0">
+                    <div className="bg-blue-50 dark:bg-blue-900/50 p-4 rounded-2xl shrink-0">
                         <Eye className="w-8 h-8 text-[#184892] dark:text-blue-400" />
                     </div>
                     <div>
@@ -123,7 +125,7 @@ export default function AboutUsPage() {
                 </div>
 
                 <div className="max-w-4xl mx-10 mt-10 cursor-pointer  bg-white dark:bg-[#1d1c1cf2] rounded-3xl p-6 md:p-12 shadow-md border border-neutral-100 dark:border-neutral-700 flex flex-col md:flex-row items-center gap-8 relative z-10 transition-all hover:shadow-xl duration-700 hover:scale-95">
-                    <div className="bg-blue-50 dark:bg-blue-900/50 p-4 rounded-2xl flex-shrink-0">
+                    <div className="bg-blue-50 dark:bg-blue-900/50 p-4 rounded-2xl shrink-0">
                         <Rocket className="w-8 h-8 text-[#184892] dark:text-blue-400" />
                     </div>
                     <div>
@@ -135,7 +137,7 @@ export default function AboutUsPage() {
                 </div>
 
                 <div className="max-w-2xl mx-16 mt-10 cursor-pointer  bg-white dark:bg-[#1d1c1cf2] rounded-3xl p-6 md:p-12 shadow-md border border-neutral-100 dark:border-neutral-700 flex flex-col md:flex-row items-center gap-8 relative z-10 transition-all hover:shadow-xl duration-700 hover:scale-95">
-                    <div className="bg-blue-50 dark:bg-blue-900/50 p-4 rounded-2xl flex-shrink-0">
+                    <div className="bg-blue-50 dark:bg-blue-900/50 p-4 rounded-2xl shrink-0">
                         <Gem className="w-8 h-8 text-[#184892] dark:text-blue-400" />
                     </div>
                     <div>
@@ -162,6 +164,12 @@ export default function AboutUsPage() {
             <section className="bg-[#f2f3f7] dark:bg-[#202123b4]">
                 <ContactSection />
             </section>
+
+            {/* QR Contact Section */}
+            <QRContactSection/>
+
+            {/* Lawyer Request CTA */}
+            <LawyerRequestCTA/>
 
             {/* Newsletter Section */}
             <div className="bg-[#f2f3f7] dark:bg-[#1b1f2c]">

@@ -44,8 +44,14 @@ const Footer = () => {
                             <Link href="/contact-us">
                                 <li className="cursor-pointer mb-3 transform transition duration-300 hover:text-blue-500 hover:scale-105">Contact</li>
                             </Link>
-                            <Link  href="/blog">
+                            <Link href="/blog">
                                 <li className="cursor-pointer mb-3 transform transition duration-300 hover:text-blue-500 hover:scale-105">Blog</li>
+                            </Link>
+                            <Link href="/lawyer-request">
+                                <li className="cursor-pointer mb-3 transform transition duration-300 hover:text-blue-500 hover:scale-105">Lawyer Request</li>
+                            </Link>
+                            <Link href="/partnership-request">
+                                <li className="cursor-pointer mb-3 transform transition duration-300 hover:text-blue-500 hover:scale-105">Partnership Request</li>
                             </Link>
                         </ul>
                     </div>

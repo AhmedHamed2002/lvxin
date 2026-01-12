@@ -10,16 +10,17 @@ import Footer from "@/components/footer";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import CTASection from "@/components/CTASection";
 import WhyChooseLVX from "@/components/WhyChooseLVX";
+import LawyerRequestCTA from "@/components/LawyerRequestCTA";
+import QRContactSection from "@/components/QRContactSection";
 
 export default function HomePage() {
-    
+
     const scrollToNumbers = () => {
         const numbersSection = document.getElementById('numbers-section');
         if (numbersSection) {
             numbersSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
-
 
     const testimonials = [
         {
@@ -48,14 +49,13 @@ export default function HomePage() {
         },
     ];
 
-
     return(
-    <div className="flex flex-col min-h-screen bg-white dark:bg-[#121212]">      
+    <div className="flex flex-col min-h-screen bg-white dark:bg-[#121212]">
         <main className="flex-1">
             {/* <section className="h-lvh flex flex-col justify-center items-center py-24 lg:py-32 bg-cover bg-center bg-no-repeat bg-[url('/assets/images/home.png')] dark:bg-[url('/assets/images/home-dark.png')]"> */}
-            
+
             {/* Header Section */}
-            <section className="relative h-lvh flex flex-col justify-center items-center py-24 lg:py-32 overflow-hidden bg-linear-to-br from-blue-200 via-white to-blue-200 dark:from-black dark:via-neutral-950 dark:to-neutral-900">           
+            <section className="relative h-lvh flex flex-col justify-center items-center py-24 lg:py-32 overflow-hidden bg-linear-to-br from-blue-200 via-white to-blue-200 dark:from-black dark:via-neutral-950 dark:to-neutral-900">
                 {/* Interactive Effect */}
                 <InteractiveBackground />
 
@@ -72,7 +72,7 @@ export default function HomePage() {
                             <h1 className=" text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] font-bold leading-tight text-center capitalize max-w-4xl text-[#0e2259] dark:text-white">
                                 AI Legal   <br />
                                 <span className="text-[#1b66a9] dark:text-[#1b66a9]">
-                                    Solutions  
+                                    Solutions
                                 </span>
                             </h1>
                             <p className="text-lg sm:text-xl text-center max-w-2xl text-[#0e2259] dark:text-slate-300">
@@ -139,7 +139,7 @@ export default function HomePage() {
                         </div>
                     </div>
                 </div>
-            </section>           
+            </section>
 
             {/* Everything You Need  Section*/}
             <section className="w-full bg-[#f5f8ff] dark:bg-[#162242] py-10">
@@ -171,7 +171,7 @@ export default function HomePage() {
 
                     <p className="text-sm sm:text-base lg:text-lg text-center lg:text-start  text-[#848a93] dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed">
                         Our AI doesn't just read it understands. It highlights critical risks, missing
-                        clauses, and unfavorable terms instantly, using a simple color-coded 
+                        clauses, and unfavorable terms instantly, using a simple color-coded
                         system.
                     </p>
 
@@ -247,7 +247,7 @@ export default function HomePage() {
                     <div className="flex flex-col gap-12 justify-start items-center">
                         <div className="flex flex-col justify-start items-center w-full max-w-3xl">
                             <h2 className="text-3xl md:text-4xl mb-5 font-bold leading-[59px] text-center text-[#0e2259] dark:text-[#b4bed7]">
-                                How It Works                        
+                                How It Works
                             </h2>
                             <p className="text-sm md:text-base font-normal leading-[21px] text-center text-[#3f3f3f] dark:text-slate-300 px-14">
                                 From upload to actionable insights in four simple steps.
@@ -314,7 +314,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
-            
+
             {/* Why Legal Teams Choose LVX */}
             <section className="bg-[#f6f9ff] dark:bg-[#0d1630]">
                 <WhyChooseLVX />
@@ -335,7 +335,7 @@ export default function HomePage() {
                             className=" basis-full sm:basis-1/2 lg:basis-1/3 px-2">
                             <Card className="h-full border shadow-md dark:bg-[#151619] cursor-pointer hover:scale-[0.95]  transition-transform duration-700 hover:shadow-xl  hover:bg-blue-200 dark:hover:bg-[#272626]">
                             <CardContent className="py-6 flex flex-col justify-between h-full space-y-4">
-                                
+
                                 {/* Stars */}
                                 <div className="flex gap-1 text-yellow-400">
                                 {[...Array(5)].map((_, i) => (
@@ -370,7 +370,7 @@ export default function HomePage() {
                         </CarouselItem>
                         ))}
                     </CarouselContent>
-                    
+
                     {/* Navigation */}
                     <CarouselPrevious className="hidden lg:flex mx-4 cursor-pointer z-40" />
                     <CarouselNext className="hidden lg:flex mx-4 cursor-pointer z-40"/>
@@ -378,7 +378,7 @@ export default function HomePage() {
                     <div className="flex justify-center gap-4 mt-10 lg:hidden cursor-pointer">
                         <CarouselPrevious className="static h-9 w-9 cursor-pointer  z-40 bg-white dark:bg-[#202227] shadow-md "/>
                         <CarouselNext className="static h-9 w-9 cursor-pointer z-40 bg-white dark:bg-[#202227] shadow-md"/>
-                    </div>    
+                    </div>
                     </Carousel>
                 </div>
 
@@ -410,7 +410,7 @@ export default function HomePage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-8">
                 <div className="text-center mb-14">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#0e2259] dark:text-[#b4bed7]">
-                        Ready to Transform Your Legal Workflow?               
+                        Ready to Transform Your Legal Workflow?
                     </h2>
                     <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mt-3">
                         Try all our premium features completely free for 14 days. No credit card required.
@@ -456,6 +456,12 @@ export default function HomePage() {
                 </div>
             </div>
             </section>
+            
+            {/* Lawyer Request CTA */}
+            <LawyerRequestCTA/>
+            
+            {/* QR Contact Section */}
+            <QRContactSection/>
 
             {/* CTA Section */}
             <CTASection />

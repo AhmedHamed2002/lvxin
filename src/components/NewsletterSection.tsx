@@ -9,7 +9,7 @@ const NewsletterSection = () => {
   return (
     <div className="w-full py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative w-full bg-gradient-to-r from-[#4461f2] to-[#3652e1] rounded-3xl overflow-hidden px-8 py-12 md:py-20 md:px-16 flex flex-col md:flex-row items-center gap-12">
+        <div className="relative w-full bg-linear-to-r from-[#4461f2] to-[#3652e1] rounded-3xl overflow-hidden px-8 py-12 md:py-20 md:px-16 flex flex-col md:flex-row items-center gap-12">
           
           {/* Content */}
           <div className="flex-1 text-center md:text-left z-10">
