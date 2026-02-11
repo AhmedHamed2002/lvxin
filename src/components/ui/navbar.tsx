@@ -190,6 +190,13 @@ export default function Navbar() {
                     <Settings className="mr-2 w-4 h-4" /> Settings
                   </Link>
                 </DropdownMenuItem>
+                  {loggedIn && (
+                  <DropdownMenuItem asChild>
+                    <Link href="/admin-dashboard/dashboard" className="cursor-pointer">
+                      <Settings className="mr-2 w-4 h-4" /> Admin Dashboard
+                    </Link>
+                  </DropdownMenuItem>
+                  )}
                 <DropdownMenuItem onClick={handleLogout} className="text-red-500">
                   <LogOut className="mr-2 w-4 h-4" /> Logout
                 </DropdownMenuItem>
